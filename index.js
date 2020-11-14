@@ -1,3 +1,5 @@
+let cont = "";
+
 function get(ID) {
   return document.getElementById(ID).value / 1;
 }
@@ -51,8 +53,16 @@ $("#ProcessButton").click(() => {
 });
 
 $("#BP").keyup(function (e) {
-  let res = prettify(document.getElementById("BP").value);
+  let ncont = document.getElementById("BP").value;
+  if (ncont === "") {
+    cont = "";
+    return;
+  }
+  let res = prettify(ncont);
   if (res != "NaN") {
     document.getElementById("BP").value = res;
+    cont = res;
+  } else {
+    document.getElementById("BP").value = cont;
   }
 });
