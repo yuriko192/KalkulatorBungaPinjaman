@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Kalkulator Bunga</title>
+  </head>
+  <body>
+    <div class="header"><h1>Kalkulator Bunga</h1></div>
+    <div class="mainContainer">
+      <div class="inputarea">
+        <h4 class="head">Besar Pinjaman</h4>
+        <div class="inputgroup">
+          <input type="text" disabled placeholder="Rp" />
+          <input type="text" name="" id="BP" placeholder="Besar Pinjaman" />
+        </div>
+      </div>
+      <div class="inputarea">
+        <h4 class="head">Besar Bunga</h4>
+        <div class="inputgroup">
+          <input type="text" name="" id="BB" placeholder="Besar Bunga" />
+          <input type="text" disabled placeholder="%" />
+          <select name="" id="BBS">
+            <option value="12">Tahun</option>
+            <option value="1">Bulan</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputarea">
+        <h4 class="head">Lama Pinjaman</h4>
+        <div class="inputgroup">
+          <input type="text" name="" id="LP" placeholder="Lama Pinjaman" />
+          <select name="" id="LPS">
+            <option value="12">Tahun</option>
+            <option value="1">Bulan</option>
+          </select>
+        </div>
+      </div>
+      <div class="buttonarea">
+        <button id="ProcessButton">Proses</button>
+      </div>
+    </div>
+    <div class="resultContainer">
+      <h4>Besar Bunga:</h4>
+      <h3 id="answer"></h3>
+      <div class="monthlyres"></div>
+    </div>
+    <script src="jsquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

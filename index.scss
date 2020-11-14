@@ -1,0 +1,81 @@
+%flex {
+  display: flex;
+}
+%flex-col {
+  @extend %flex;
+  flex-direction: column;
+}
+* {
+  font-family: roboto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  * {
+    margin: 10px 5px;
+  }
+  background-color: rgb(220, 240, 245);
+}
+
+.header {
+  margin: 0 0 10px 0;
+  background-color: rgb(48, 57, 61);
+  color: rgb(206, 206, 206);
+  padding: 10px 5px;
+}
+
+.mainContainer {
+  @extend %flex-col;
+  margin: 5px 10px;
+  background-color: rgb(197, 223, 214);
+  .inputarea {
+    @extend %flex-col;
+    position: relative;
+    margin: 0;
+    .head {
+      color: rgb(17, 22, 56);
+    }
+    .inputgroup {
+      @extend %flex;
+      input,
+      select {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+      input {
+        flex-grow: 1;
+        &:disabled {
+          flex-grow: 0;
+          width: 2rem;
+          background-color: white;
+          border-width: 2px 0;
+          border-color: -internal-light-dark(
+            rgb(118, 118, 118),
+            rgb(133, 133, 133)
+          );
+          border-image: initial;
+          border-style: inset;
+          &::placeholder {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  .buttonarea {
+    @extend %flex;
+    justify-content: center;
+    button {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.resultContainer {
+  @extend %flex-col;
+  #answer {
+  }
+  .monthlyres {
+  }
+}
