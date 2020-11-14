@@ -13,64 +13,71 @@
   </head>
   <body>
     <div class="header"><h1>Kalkulator Bunga</h1></div>
-    <div class="resultContainer">
-      <h4>Besar Bunga</h4>
-      <h1 id="answer">Rp 0,-</h1>
-    </div>
-    <div class="inputContainer">
-      <div class="inputarea">
-        <h4 class="head">Besar Pinjaman</h4>
-        <div class="inputgroup">
-          <input type="text" disabled placeholder="Rp" />
-          <input type="text" name="" id="BP" placeholder="Besar Pinjaman" />
+    <div class="mainContainer">
+      <div class="resultContainer">
+        <h4>Besar Bunga</h4>
+        <h1 id="answer">Rp 0,-</h1>
+      </div>
+      <div class="inputContainer">
+        <div class="inputarea">
+          <h4 class="head">Besar Pinjaman</h4>
+          <div class="inputgroup">
+            <input type="text" disabled placeholder="Rp" />
+            <input type="text" name="" id="BP" placeholder="Besar Pinjaman" />
+          </div>
+        </div>
+        <div class="inputarea">
+          <h4 class="head">Besar Bunga</h4>
+          <div class="inputgroup">
+            <input
+              type="number"
+              name=""
+              id="BB"
+              placeholder="Persentase Bunga"
+            />
+            <input type="text" disabled placeholder="%" />
+            <select name="" id="BBS">
+              <option value="12">Tahun</option>
+              <option value="1">Bulan</option>
+            </select>
+          </div>
+        </div>
+        <div class="inputarea">
+          <h4 class="head">Lama Pinjaman</h4>
+          <div class="inputgroup">
+            <input type="number" name="" id="LP" placeholder="Lama Pinjaman" />
+            <select name="" id="LPS">
+              <option value="12">Tahun</option>
+              <option value="1">Bulan</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttonarea">
+          <button id="ProcessButton">Proses</button>
         </div>
       </div>
-      <div class="inputarea">
-        <h4 class="head">Besar Bunga</h4>
-        <div class="inputgroup">
-          <input type="number" name="" id="BB" placeholder="Persentase Bunga" />
-          <input type="text" disabled placeholder="%" />
-          <select name="" id="BBS">
-            <option value="12">Tahun</option>
-            <option value="1">Bulan</option>
-          </select>
+      <div class="tableContainer">
+        <div class="items">
+          <h4>
+            <span><img src="assets/loan.svg" alt="" class="icon" /></span>
+            Besar Bunga
+          </h4>
+          <h1 id="TableBB">Rp 0,-</h1>
         </div>
-      </div>
-      <div class="inputarea">
-        <h4 class="head">Lama Pinjaman</h4>
-        <div class="inputgroup">
-          <input type="number" name="" id="LP" placeholder="Lama Pinjaman" />
-          <select name="" id="LPS">
-            <option value="12">Tahun</option>
-            <option value="1">Bulan</option>
-          </select>
+        <div class="items">
+          <h4>
+            <span><img src="assets/percent.svg" alt="" class="icon" /></span>
+            Persentase Bunga
+          </h4>
+          <h1 id="TablePB">0 %</h1>
         </div>
-      </div>
-      <div class="buttonarea">
-        <button id="ProcessButton">Proses</button>
-      </div>
-    </div>
-    <div class="tableContainer">
-      <div class="items">
-        <h4>
-          <span><img src="assets/loan.svg" alt="" class="icon" /></span>
-          Besar Bunga
-        </h4>
-        <h1 id="TableBB">Rp 0,-</h1>
-      </div>
-      <div class="items">
-        <h4>
-          <span><img src="assets/percent.svg" alt="" class="icon" /></span>
-          Persentase Bunga
-        </h4>
-        <h1 id="TablePB">0 %</h1>
-      </div>
-      <div class="items">
-        <h4>
-          <span><img src="assets/wallet.svg" alt="" class="icon" /></span>
-          Total Bayar
-        </h4>
-        <h1 id="TableTB">Rp 0,-</h1>
+        <div class="items">
+          <h4>
+            <span><img src="assets/wallet.svg" alt="" class="icon" /></span>
+            Total Bayar
+          </h4>
+          <h1 id="TableTB">Rp 0,-</h1>
+        </div>
       </div>
     </div>
     <div class="footer">

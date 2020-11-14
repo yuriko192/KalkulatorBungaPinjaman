@@ -16,6 +16,7 @@ $primary: #090b33;
   margin: 0;
 }
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   * {
@@ -23,6 +24,11 @@ body {
     color: $primary;
   }
   background-color: #eceff6;
+}
+
+.maincontainer {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -110,11 +116,35 @@ body {
 }
 
 .footer {
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
   background-color: $primary;
   padding: 10px 5px;
   color: whitesmoke;
   * {
     color: inherit;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mainContainer {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "input result";
+    align-items: center;
+    .resultContainer {
+      display: none;
+    }
+    .inputContainer {
+      grid-area: input;
+    }
+    .tableContainer {
+      grid-area: result;
+    }
   }
 }

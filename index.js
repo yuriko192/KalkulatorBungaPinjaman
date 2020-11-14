@@ -40,8 +40,12 @@ $("#ProcessButton").click(() => {
   let BB = get("BB") / get("BBS");
   let LP = get("LP") * get("LPS");
   let ress = ((LP + 1) / 2) * (BB / 100) * BP;
-  console.log(ress / BP);
-  if (ress != "NaN") {
+  console.log(ress);
+  console.log(BP);
+  console.log(ress == "NaN");
+  console.log(BP == "NaN");
+  console.log(ress == "NaN" || BP == "NaN");
+  if (!(ress == "NaN" || BP == "NaN" || ress == "" || BP == "")) {
     $("#answer").html("Rp " + prettify(ress));
     $("#TableBB").html("Rp " + prettify(ress));
     $("#TablePB").html((ress / BP) * 100 + " %");
