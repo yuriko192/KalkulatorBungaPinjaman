@@ -10,7 +10,11 @@ $primary: #090b33;
 * {
   font-family: roboto;
 }
-
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0;
+}
 body {
   margin: 0;
   padding: 0;
@@ -96,5 +100,21 @@ body {
         border: solid 1px $primary;
       }
     }
+  }
+}
+
+.tableContainer {
+  .items {
+    margin: 20px 0;
+  }
+}
+
+.footer {
+  margin: 10px 0 0 0;
+  background-color: $primary;
+  padding: 10px 5px;
+  color: whitesmoke;
+  * {
+    color: inherit;
   }
 }
