@@ -23,13 +23,17 @@ body {
 
 body * {
   margin: 10px 5px;
+  color: #090b33;
 }
 
 .header {
   margin: 0 0 10px 0;
   background-color: #090b33;
-  color: whitesmoke;
   padding: 10px 5px;
+}
+
+.header * {
+  color: whitesmoke;
 }
 
 .resultContainer {

@@ -30,7 +30,7 @@ function formatback(x) {
   }
   x = x.split(".");
   x = x.join("");
-  return x;
+  return parseInt(x);
 }
 
 $("#ProcessButton").click(() => {
@@ -38,8 +38,12 @@ $("#ProcessButton").click(() => {
   let BB = get("BB") / get("BBS");
   let LP = get("LP") * get("LPS");
   let ress = ((LP + 1) / 2) * (BB / 100) * BP;
+  console.log(ress / BP);
   if (ress != "NaN") {
     $("#answer").html("Rp " + prettify(ress));
+    $("#TableBB").html("Rp " + prettify(ress));
+    $("#TablePB").html((ress / BP) * 100 + " %");
+    $("#TableTB").html("Rp " + prettify(ress + BP));
   } else {
     //show error message
     $("#answer").html("Rp " + prettify(ress));

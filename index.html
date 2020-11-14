@@ -15,7 +15,7 @@
     <div class="header"><h1>Kalkulator Bunga</h1></div>
     <div class="resultContainer">
       <h4>Besar Bunga</h4>
-      <h1 id="answer">Rp 1.499.000.000,-</h1>
+      <h1 id="answer">Rp 0,-</h1>
     </div>
     <div class="inputContainer">
       <div class="inputarea">
@@ -28,7 +28,7 @@
       <div class="inputarea">
         <h4 class="head">Besar Bunga</h4>
         <div class="inputgroup">
-          <input type="text" name="" id="BB" placeholder="Persentase Bunga" />
+          <input type="number" name="" id="BB" placeholder="Persentase Bunga" />
           <input type="text" disabled placeholder="%" />
           <select name="" id="BBS">
             <option value="12">Tahun</option>
@@ -39,7 +39,7 @@
       <div class="inputarea">
         <h4 class="head">Lama Pinjaman</h4>
         <div class="inputgroup">
-          <input type="text" name="" id="LP" placeholder="Lama Pinjaman" />
+          <input type="number" name="" id="LP" placeholder="Lama Pinjaman" />
           <select name="" id="LPS">
             <option value="12">Tahun</option>
             <option value="1">Bulan</option>
@@ -48,6 +48,20 @@
       </div>
       <div class="buttonarea">
         <button id="ProcessButton">Proses</button>
+      </div>
+    </div>
+    <div class="tableContainer">
+      <div class="items">
+        <h4>Besar Bunga</h4>
+        <h1 id="TableBB">Rp 0,-</h1>
+      </div>
+      <div class="items">
+        <h4>Persentase Bunga</h4>
+        <h1 id="TablePB">0 %</h1>
+      </div>
+      <div class="items">
+        <h4>Total Bayar</h4>
+        <h1 id="TableTB">Rp 0,-</h1>
       </div>
     </div>
     <script src="jsquery.min.js"></script>

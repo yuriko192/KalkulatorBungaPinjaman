@@ -16,6 +16,7 @@ body {
   padding: 0;
   * {
     margin: 10px 5px;
+    color: $primary;
   }
   background-color: #eceff6;
 }
@@ -23,8 +24,10 @@ body {
 .header {
   margin: 0 0 10px 0;
   background-color: $primary;
-  color: whitesmoke;
   padding: 10px 5px;
+  * {
+    color: whitesmoke;
+  }
 }
 
 .resultContainer {
