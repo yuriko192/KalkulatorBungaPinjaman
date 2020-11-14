@@ -38,11 +38,17 @@ $("#ProcessButton").click(() => {
   let BB = get("BB") / get("BBS");
   let LP = get("LP") * get("LPS");
   let ress = ((LP + 1) / 2) * (BB / 100) * BP;
-  $("#answer").html("Rp " + prettify(ress));
+  if (ress != "NaN") {
+    $("#answer").html("Rp " + prettify(ress));
+  } else {
+    //show error message
+    $("#answer").html("Rp " + prettify(ress));
+  }
 });
 
 $("#BP").keyup(function (e) {
-  document.getElementById("BP").value = prettify(
-    document.getElementById("BP").value
-  );
+  let res = prettify(document.getElementById("BP").value);
+  if (res != "NaN") {
+    document.getElementById("BP").value = res;
+  }
 });

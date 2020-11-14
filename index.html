@@ -13,7 +13,11 @@
   </head>
   <body>
     <div class="header"><h1>Kalkulator Bunga</h1></div>
-    <div class="mainContainer">
+    <div class="resultContainer">
+      <h4>Besar Bunga</h4>
+      <h1 id="answer">Rp 1.499.000.000,-</h1>
+    </div>
+    <div class="inputContainer">
       <div class="inputarea">
         <h4 class="head">Besar Pinjaman</h4>
         <div class="inputgroup">
@@ -24,7 +28,7 @@
       <div class="inputarea">
         <h4 class="head">Besar Bunga</h4>
         <div class="inputgroup">
-          <input type="text" name="" id="BB" placeholder="Besar Bunga" />
+          <input type="text" name="" id="BB" placeholder="Persentase Bunga" />
           <input type="text" disabled placeholder="%" />
           <select name="" id="BBS">
             <option value="12">Tahun</option>
@@ -45,11 +49,6 @@
       <div class="buttonarea">
         <button id="ProcessButton">Proses</button>
       </div>
-    </div>
-    <div class="resultContainer">
-      <h4>Besar Bunga:</h4>
-      <h3 id="answer"></h3>
-      <div class="monthlyres"></div>
     </div>
     <script src="jsquery.min.js"></script>
     <script src="index.js"></script>

@@ -1,3 +1,5 @@
+$primary: #090b33;
+
 %flex {
   display: flex;
 }
@@ -15,26 +17,36 @@ body {
   * {
     margin: 10px 5px;
   }
-  background-color: rgb(220, 240, 245);
+  background-color: #eceff6;
 }
 
 .header {
   margin: 0 0 10px 0;
-  background-color: rgb(48, 57, 61);
-  color: rgb(206, 206, 206);
+  background-color: $primary;
+  color: whitesmoke;
   padding: 10px 5px;
 }
 
-.mainContainer {
+.resultContainer {
+  @extend %flex-col;
+  align-items: center;
+  #answer {
+    color: $primary;
+  }
+}
+
+.inputContainer {
   @extend %flex-col;
   margin: 5px 10px;
-  background-color: rgb(197, 223, 214);
+  background-color: #fefefe;
+  padding: 15px 0;
+  border-radius: 10px;
   .inputarea {
     @extend %flex-col;
     position: relative;
     margin: 0;
     .head {
-      color: rgb(17, 22, 56);
+      color: $primary;
     }
     .inputgroup {
       @extend %flex;
@@ -68,14 +80,18 @@ body {
     justify-content: center;
     button {
       font-size: 1.1rem;
+      color: #eeeeee;
+      background-color: $primary;
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      outline: none;
+      border: none;
+      transition: all 100ms;
+      &:hover {
+        background-color: white;
+        color: $primary;
+        border: solid 1px $primary;
+      }
     }
-  }
-}
-
-.resultContainer {
-  @extend %flex-col;
-  #answer {
-  }
-  .monthlyres {
   }
 }

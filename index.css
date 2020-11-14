@@ -1,10 +1,10 @@
-.mainContainer, .mainContainer .inputarea, .resultContainer, .mainContainer .inputarea .inputgroup, .mainContainer .buttonarea {
+.resultContainer, .inputContainer, .inputContainer .inputarea, .inputContainer .inputarea .inputgroup, .inputContainer .buttonarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.mainContainer, .mainContainer .inputarea, .resultContainer {
+.resultContainer, .inputContainer, .inputContainer .inputarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #dcf0f5;
+  background-color: #eceff6;
 }
 
 body * {
@@ -27,38 +27,50 @@ body * {
 
 .header {
   margin: 0 0 10px 0;
-  background-color: #30393d;
-  color: #cecece;
+  background-color: #090b33;
+  color: whitesmoke;
   padding: 10px 5px;
 }
 
-.mainContainer {
-  margin: 5px 10px;
-  background-color: #c5dfd6;
+.resultContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.mainContainer .inputarea {
+.resultContainer #answer {
+  color: #090b33;
+}
+
+.inputContainer {
+  margin: 5px 10px;
+  background-color: #fefefe;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+.inputContainer .inputarea {
   position: relative;
   margin: 0;
 }
 
-.mainContainer .inputarea .head {
-  color: #111638;
+.inputContainer .inputarea .head {
+  color: #090b33;
 }
 
-.mainContainer .inputarea .inputgroup input,
-.mainContainer .inputarea .inputgroup select {
+.inputContainer .inputarea .inputgroup input,
+.inputContainer .inputarea .inputgroup select {
   font-size: 1.2rem;
   margin: 0;
 }
 
-.mainContainer .inputarea .inputgroup input {
+.inputContainer .inputarea .inputgroup input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.mainContainer .inputarea .inputgroup input:disabled {
+.inputContainer .inputarea .inputgroup input:disabled {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
@@ -71,29 +83,43 @@ body * {
   border-style: inset;
 }
 
-.mainContainer .inputarea .inputgroup input:disabled::-webkit-input-placeholder {
+.inputContainer .inputarea .inputgroup input:disabled::-webkit-input-placeholder {
   color: black;
 }
 
-.mainContainer .inputarea .inputgroup input:disabled:-ms-input-placeholder {
+.inputContainer .inputarea .inputgroup input:disabled:-ms-input-placeholder {
   color: black;
 }
 
-.mainContainer .inputarea .inputgroup input:disabled::-ms-input-placeholder {
+.inputContainer .inputarea .inputgroup input:disabled::-ms-input-placeholder {
   color: black;
 }
 
-.mainContainer .inputarea .inputgroup input:disabled::placeholder {
+.inputContainer .inputarea .inputgroup input:disabled::placeholder {
   color: black;
 }
 
-.mainContainer .buttonarea {
+.inputContainer .buttonarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.mainContainer .buttonarea button {
+.inputContainer .buttonarea button {
   font-size: 1.1rem;
+  color: #eeeeee;
+  background-color: #090b33;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  outline: none;
+  border: none;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+}
+
+.inputContainer .buttonarea button:hover {
+  background-color: white;
+  color: #090b33;
+  border: solid 1px #090b33;
 }
 /*# sourceMappingURL=index.css.map */
